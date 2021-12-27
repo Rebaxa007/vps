@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+    Gwb:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install vnc
+            command: sudo apt-get install xfce4 xfce4-goodies -y
+     
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - Gwb
+           
